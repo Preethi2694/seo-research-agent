@@ -8,8 +8,9 @@ app = FastAPI()
 # Allow React frontend to talk to the backend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
-    "https://seo-research-agent-frontend.onrender.com",
+    allow_origins=[
+        "http://localhost:5173",
+        "https://seo-research-agent-frontend.onrender.com",
     ],
     allow_credentials=True,
     allow_methods=["*"],
